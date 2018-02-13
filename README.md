@@ -1,31 +1,34 @@
-# The project is a music game named "rhyme master" which can be operated on Xilinx.
-# Platform
+ The project is a music game named "rhyme master" which can be operated on Xilinx.
+## Platform
 EDA tool: ise design suite 14.7
 demoboard model: Spartan6 XC6LX16-CS324
 FPGA model: Xilinx
-# Peripherals
+## Peripherals
 buzzer
-# Introductions
+*******
+*** there is a video display "presentation.mp4" that you can watch first! ***
+*******
+## Introductions
 - Place the demoboard horizontally, the rightmost line is the tapping line. With the playing of music, the light key well move toward you (to right) until the tapping line. While they are just on the tapping line, press the button of demoboard.
 - the pathway is like this
 ```
 -----------------
-|		|		|		|key is moving on the screen in this direction
-|d 		|		|a 		↓
------------------		↓
-   b         c 			↓
------------------		↓
-|		|		|		↓
-| 		|		|		↓
------------------		↓
------------------		↓
-|		|		|		↓
-|		|		|		↓
------------------		↓
------------------		↓
-|		|		|		↓
-| 		|		|		↓
------------------	<--tapping line
+|       |       |       |key is moving on the screen in this direction
+|d      |       |a      ↓
+-----------------       ↓
+   b         c          ↓
+-----------------       ↓
+|       |       |       ↓
+|       |       |       ↓
+-----------------       ↓
+-----------------       ↓
+|       |       |       ↓
+|       |       |       ↓
+-----------------       ↓
+-----------------       ↓
+|       |       |       ↓
+|       |       |       ↓
+-----------------   <--tapping line
 ```
 - there are four pathways. On "a" and "d" there are only long keys which means you should press the button for longer. On "b" and "c" you should press for shorter. And there are broken line keys like "L" which means you should press "d" and "b" at the same time while they are on the tapping line.
 - there are three qualities for your pressing. If the distance between the time key's appearing on tapping line and your pressing is not more than 0.1s, your time prediction and pressing is "perfect" which praise you 50 marks. The distance which is more than 0.1s but not more than 3 timeunits is "great" which praise you 25 marks. If you press later than the apprearing time then you get a "miss". You can end pressing a long key ahead of time. If that the score you get is calculated according to the time ratio you press.
